@@ -1,0 +1,35 @@
+{
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "Release v${version}",
+    "requireCleanWorkingDir": true,
+    "requireBranch": "main",
+    "push": true
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}",
+    "tokenRef": "GITHUB_TOKEN"
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "out": [
+        {
+          "file": "extension/manifest.json",
+          "path": "version"
+        },
+        {
+          "file": "native-host/package.json",
+          "path": "version"
+        }
+      ]
+    }
+  },
+  "hooks": {
+    "after:bump": "echo \"Version bumped to ${version}\""
+  }
+}

@@ -4,6 +4,7 @@ doc/
 # ── Dependencies ───────────────────────────────────────────────────────────────
 node_modules/
 package-lock.json
+native-host/node_modules/
 
 # ── Environment & secrets ──────────────────────────────────────────────────────
 .env
