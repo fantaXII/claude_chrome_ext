@@ -1,0 +1,7 @@
+{
+  "name": "claude-ext-native-host",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Native Messaging Host for Claude Chrome Extension",
+  "main": "host.js"
+}

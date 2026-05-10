@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Code Extension",
+  "version": "0.1.0",
+  "description": "현재 페이지 컨텍스트와 함께 Claude Code와 채팅하는 Chrome Extension",
+
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "nativeMessaging"
+  ],
+
+  "side_panel": {
+    "default_path": "sidepanel/panel.html"
+  },
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_title": "Claude Code",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
